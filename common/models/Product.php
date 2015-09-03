@@ -38,7 +38,8 @@ use yii\db\Expression;
  */
 class Product extends \yii\db\ActiveRecord
 {
-
+    public $eavWeight;
+  
     /**
      * @inheritdoc
      */
@@ -56,6 +57,11 @@ class Product extends \yii\db\ActiveRecord
         return [
             TimestampBehavior::className(),
             BlameableBehavior::className(),
+            'eav' => [
+                'class' => \mirocow\eav\EavBehavior::className(),
+                // это модель для таблицы object_attribute_value
+                'valueClass' => \mirocow\eav\models\EavAttributeValue::className(),
+            ]            
         ];
     }
 
@@ -209,7 +215,8 @@ class Product extends \yii\db\ActiveRecord
      */
     public function getConsultationsSortTime()
     {
-        return $this->hasMany(Consultation::className(), ['product_id' => 'id'])->orderBy(['created_at' => SORT_DESC]);
+        return $this->hasMany(Consultation::className(), ['product_id' => 'id'])
+        ->orderBy(['created_at' => SORT_DESC]);
     }
 
     /**
@@ -217,7 +224,8 @@ class Product extends \yii\db\ActiveRecord
      */
     public function getConsultationsPassed()
     {
-        return $this->hasMany(Consultation::className(), ['product_id' => 'id'])->where(['status' => Status::STATUS_ACTIVE])->orderBy(['created_at' => SORT_DESC]);
+        return $this->hasMany(Consultation::className(), ['product_id' => 'id'])
+        ->where(['status' => Status::STATUS_ACTIVE])->orderBy(['created_at' => SORT_DESC]);
     }
 
     /**
@@ -235,6 +243,16 @@ class Product extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'updated_by']);
     }
+    
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getEavAttributes()
+    {       
+        return \mirocow\eav\models\EavAttribute::find()
+          ->joinWith('entity')
+          ->where(['entityModel' => $this::className()]);  
+    }    
 
     /**
      * Before save.

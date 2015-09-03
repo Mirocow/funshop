@@ -6,6 +6,8 @@ use yii\helpers\ArrayHelper;
 use common\models\Category;
 use mihaildev\ckeditor\CKEditor;
 
+$i = 1;
+
 /* @var $this yii\web\View */
 /* @var $model common\models\Product */
 /* @var $form yii\widgets\ActiveForm */
@@ -74,6 +76,10 @@ use mihaildev\ckeditor\CKEditor;
             } ?>
             <div style="clear:both"></div>
         </div>
+        
+        <?//=$form->field($model,'test'); ?>
+        
+        <?=$form->field($model,'test')->dropDownList(['1' => 'Опция 1', '2' => 'Опция 2'], ['label' => 'XXX']); ?>
 
         <div class="form-group">
             <?= \backend\widgets\image\ImageDropzone::widget([

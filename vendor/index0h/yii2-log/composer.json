@@ -1,0 +1,48 @@
+{
+    "name": "index0h/yii2-log",
+    "description": "Many Yii2 log targets",
+    "version": "0.0.3",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "log", "yii2-log", "log-target", "logstash", "elasticsearch", "redis"],
+    "homepage": "https://github.com/index0h/yii2-log",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roman Levishchenko",
+            "email": "index.0h@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/index0h/yii2-log/issues",
+        "source": "https://github.com/index0h/yii2-log"
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2-composer": "2.0.*",
+        "yiisoft/yii2": "2.0.*"
+    },
+    "require-dev": {
+        "codeception/codeception": "2.0.*",
+        "yiisoft/yii2-redis": "2.0.*",
+        "yiisoft/yii2-elasticsearch": "2.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "index0h\\log\\": "src"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::setPermission"
+        ]
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "extra": {
+        "writable": [
+            "tests/_runtime",
+            "tests/_log"
+        ]
+    }
+}

@@ -20,7 +20,10 @@
         "yiisoft/yii2-swiftmailer": "*",
         "devgroup/yii2-dropzone": "*",
         "yiisoft/yii2-jui": "*",
-        "yiisoft/yii2-imagine": "*"
+        "yiisoft/yii2-imagine": "*",
+        "mirocow/yii2-redactor": "*",
+        "mirocow/yii2-eav": "*",
+        "index0h/yii2-log": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

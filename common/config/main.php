@@ -1,7 +1,7 @@
 <?php
 return [
     'name' => 'Advanced-funson86',
-    'language' => 'zh-CN',
+    'language' => 'en_EN',
     'timeZone' => 'Asia/Shanghai',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
