@@ -22,7 +22,7 @@ AppAsset::register($this);
 </head>
 <body>
     <?php $this->beginBody() ?>
-    <div id="header" class="new_header">
+    <div id="header" >
         <?= $this->render('headerBar') ?>
         <?= $this->render('headerSearch') ?>
         <?= $this->render('headerNav') ?>

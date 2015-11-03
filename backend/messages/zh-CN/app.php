@@ -7,13 +7,13 @@
  */
 
 return [
-    'STATUS_ACTIVE' => '启用',
-    'STATUS_INACTIVE' => '禁用',
-    'STATUS_DELETED' => '删除',
-    'YES' => '是',
-    'NO' => '否',
-    'SEX_MALE' => '男',
-    'SEX_FEMALE' => '女',
+    'STATUS_ACTIVE' => 'Активный',
+    'STATUS_INACTIVE' => 'Не активный',
+    'STATUS_DELETED' => 'Удален',
+    'YES' => 'Да',
+    'NO' => 'Нет',
+    'SEX_MALE' => 'Мужской',
+    'SEX_FEMALE' => 'Женский',
     'MAINTAIN_STATUS_FIRST' => '首次保养',
     'MAINTAIN_STATUS_REGULAR' => '定期保养',
     'PROMPT_STATUS' => '请筛选',

@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'yii\\redactor\\' => array($vendorDir . '/mirocow/yii2-redactor'),
+    'JSMin\\' => array($vendorDir . '/mrclay/jsmin-php/src'),
     'Imagine' => array($vendorDir . '/imagine/imagine/lib'),
     'HTMLPurifier' => array($vendorDir . '/ezyang/htmlpurifier/library'),
     'Diff' => array($vendorDir . '/phpspec/php-diff/lib'),

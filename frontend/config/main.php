@@ -10,6 +10,7 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => 'ru_RU',
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
         'cms' => [
@@ -45,6 +46,8 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        
+        /*
         'assetManager' => [
             'bundles' => [
                 'yii\bootstrap\BootstrapAsset' => [
@@ -58,6 +61,7 @@ return [
                 ],
             ],
         ],
+        */
     ],
     'params' => $params,
 ];

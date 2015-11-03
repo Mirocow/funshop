@@ -17,7 +17,7 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags(); ?>
     <?php $this->head(); ?>
 </head>
-<body class="bg-white" style="min-height: 790px">
+<body class="pace-top">
 <?php $this->beginBody() ?>
 <?= $content ?>
 <?php $this->endBody() ?>

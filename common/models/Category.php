@@ -30,6 +30,8 @@ use yii\db\Expression;
  */
 class Category extends \yii\db\ActiveRecord
 {
+  
+    use \mirocow\eav\EavTrait;
 
     /**
      * @inheritdoc
@@ -48,6 +50,11 @@ class Category extends \yii\db\ActiveRecord
         return [
             TimestampBehavior::className(),
             // BlameableBehavior::className(),
+            'eav' => [
+                'class' => \mirocow\eav\EavBehavior::className(),
+                // это модель для таблицы object_attribute_value
+                'valueClass' => \mirocow\eav\models\EavAttributeValue::className(),
+            ]            
         ];
     }
 
@@ -298,5 +305,18 @@ class Category extends \yii\db\ActiveRecord
 
         return $arrayResult;
     }
+    
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getEavAttributes()
+    {       
+        return \mirocow\eav\models\EavAttribute::find()
+          ->joinWith('entity')
+          ->where([
+            'categoryId' => $this->id,
+            //'entityModel' => $this::className()
+        ]);  
+    }    
 
 }

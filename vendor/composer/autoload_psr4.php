@@ -16,6 +16,7 @@ return array(
     'yii\\codeception\\' => array($vendorDir . '/yiisoft/yii2-codeception'),
     'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
+    'mirocow\\minify\\' => array($vendorDir . '/mirocow/yii2-minify-view'),
     'mirocow\\eav\\' => array($vendorDir . '/mirocow/yii2-eav/src'),
     'mihaildev\\ckeditor\\' => array($vendorDir . '/mihaildev/yii2-ckeditor'),
     'index0h\\log\\' => array($vendorDir . '/index0h/yii2-log/src'),
@@ -25,5 +26,6 @@ return array(
     'funson86\\auth\\' => array($vendorDir . '/funson86/yii2-auth'),
     'devgroup\\dropzone\\' => array($vendorDir . '/devgroup/yii2-dropzone'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
+    'GK\\' => array($vendorDir . '/gkralik/php-uglifyjs/lib'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
 );

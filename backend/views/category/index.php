@@ -31,8 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
         </tr>
         </thead>
         <tbody>
-        <?php foreach($dataProvider as $item){ ?>
-            <tr data-key="1">
+        <?php foreach($dataProvider as $item): ?>
+            <tr  class="draggable">
                 <td><?= $item['id']; ?></td>
                 <td><?= $item['label']; ?></td>
                 <td><?= $item['sort_order']; ?></td>
@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <a href="<?= \Yii::$app->getUrlManager()->createUrl(['category/delete','id'=>$item['id']]); ?>"" title="<?= Yii::t('cms', 'Delete');?>" data-confirm="<?= Yii::t('cms', 'Are you sure you want to delete this item?');?>" data-method="post" data-pjax="0"><span class="glyphicon glyphicon-trash"></span></a>
                 </td>
             </tr>
-        <?php } ?>
+        <?php endforeach; ?>
         </tbody>
     </table>
 

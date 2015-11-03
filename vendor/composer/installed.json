@@ -6,18 +6,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-composer.git",
-            "reference": "6b2a2b3bb83d4b3dd791f76e64c48973ce01bac6"
+            "reference": "87cd1f2e0dd454a837607de612b1057840effe8b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/6b2a2b3bb83d4b3dd791f76e64c48973ce01bac6",
-            "reference": "6b2a2b3bb83d4b3dd791f76e64c48973ce01bac6",
+            "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/87cd1f2e0dd454a837607de612b1057840effe8b",
+            "reference": "87cd1f2e0dd454a837607de612b1057840effe8b",
             "shasum": ""
         },
         "require": {
             "composer-plugin-api": "^1.0"
         },
-        "time": "2015-06-11 19:55:58",
+        "time": "2015-09-25 10:48:24",
         "type": "composer-plugin",
         "extra": {
             "class": "yii\\composer\\Plugin",
@@ -25,7 +25,7 @@
                 "dev-master": "2.0.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "yii\\composer\\": ""
@@ -46,68 +46,6 @@
             "composer",
             "extension installer",
             "yii2"
-        ]
-    },
-    {
-        "name": "cebe/markdown",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/cebe/markdown.git",
-            "reference": "e14d3da8f84eefa3792fd22b5b5ecba9c98d2e18"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/cebe/markdown/zipball/e14d3da8f84eefa3792fd22b5b5ecba9c98d2e18",
-            "reference": "e14d3da8f84eefa3792fd22b5b5ecba9c98d2e18",
-            "shasum": ""
-        },
-        "require": {
-            "lib-pcre": "*",
-            "php": ">=5.4.0"
-        },
-        "require-dev": {
-            "cebe/indent": "*",
-            "facebook/xhprof": "*@dev",
-            "phpunit/phpunit": "4.1.*"
-        },
-        "time": "2015-03-20 11:07:08",
-        "bin": [
-            "bin/markdown"
-        ],
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.1.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "cebe\\markdown\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Carsten Brandt",
-                "email": "mail@cebe.cc",
-                "homepage": "http://cebe.cc/",
-                "role": "Creator"
-            }
-        ],
-        "description": "A super fast, highly extensible markdown parser for PHP",
-        "homepage": "https://github.com/cebe/markdown#readme",
-        "keywords": [
-            "extensible",
-            "fast",
-            "gfm",
-            "markdown",
-            "markdown-extra"
         ]
     },
     {
@@ -157,6 +95,132 @@
         ]
     },
     {
+        "name": "bower-asset/jquery.inputmask",
+        "version": "3.2.2",
+        "version_normalized": "3.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
+            "reference": "ebceb88a131e1fbc159733a88a6778ffc02debab"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/ebceb88a131e1fbc159733a88a6778ffc02debab",
+            "reference": "ebceb88a131e1fbc159733a88a6778ffc02debab",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/jquery": ">=1.7"
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": [
+                "./dist/inputmask/inputmask.dependencyLib.jquery.js",
+                "./dist/inputmask/inputmask.js",
+                "./dist/inputmask/inputmask.extensions.js",
+                "./dist/inputmask/inputmask.date.extensions.js",
+                "./dist/inputmask/inputmask.numeric.extensions.js",
+                "./dist/inputmask/inputmask.phone.extensions.js",
+                "./dist/inputmask/inputmask.regex.extensions.js",
+                "./dist/inputmask/jquery.inputmask.js",
+                "./dist/jquery.inputmask.bundle.js",
+                "./extra/dependencyLibs/inputmask.dependencyLib.jqlite.js",
+                "./extra/dependencyLibs/inputmask.dependencyLib.js",
+                "./extra/phone-codes/phone-be.js",
+                "./extra/phone-codes/phone-codes.js",
+                "./extra/phone-codes/phone-nl.js",
+                "./extra/phone-codes/phone-ru.js",
+                "./extra/phone-codes/phone-uk.js"
+            ],
+            "bower-asset-ignore": [
+                "**/.*",
+                "qunit/",
+                "nuget/",
+                "tools/",
+                "js/",
+                "*.md",
+                "build.properties",
+                "build.xml",
+                "jquery.inputmask.jquery.json"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "http://opensource.org/licenses/mit-license.php"
+        ],
+        "description": "jquery.inputmask is a jquery plugin which create an input mask.",
+        "keywords": [
+            "form",
+            "input",
+            "inputmask",
+            "jquery",
+            "mask",
+            "plugins"
+        ]
+    },
+    {
+        "name": "cebe/markdown",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/cebe/markdown.git",
+            "reference": "e14d3da8f84eefa3792fd22b5b5ecba9c98d2e18"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/cebe/markdown/zipball/e14d3da8f84eefa3792fd22b5b5ecba9c98d2e18",
+            "reference": "e14d3da8f84eefa3792fd22b5b5ecba9c98d2e18",
+            "shasum": ""
+        },
+        "require": {
+            "lib-pcre": "*",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "cebe/indent": "*",
+            "facebook/xhprof": "*@dev",
+            "phpunit/phpunit": "4.1.*"
+        },
+        "time": "2015-03-20 11:07:08",
+        "bin": [
+            "bin/markdown"
+        ],
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "cebe\\markdown\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Carsten Brandt",
+                "email": "mail@cebe.cc",
+                "homepage": "http://cebe.cc/",
+                "role": "Creator"
+            }
+        ],
+        "description": "A super fast, highly extensible markdown parser for PHP",
+        "homepage": "https://github.com/cebe/markdown#readme",
+        "keywords": [
+            "extensible",
+            "fast",
+            "gfm",
+            "markdown",
+            "markdown-extra"
+        ]
+    },
+    {
         "name": "bower-asset/yii2-pjax",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -189,7 +253,7 @@
                 "dev-master": "2.0.3-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "license": [
             "MIT"
         ]
@@ -223,60 +287,6 @@
             ]
         },
         "installation-source": "dist"
-    },
-    {
-        "name": "bower-asset/jquery.inputmask",
-        "version": "3.1.63",
-        "version_normalized": "3.1.63.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
-            "reference": "c40c7287eadc31e341ebbf0c02352eb55b9cbc48"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/c40c7287eadc31e341ebbf0c02352eb55b9cbc48",
-            "reference": "c40c7287eadc31e341ebbf0c02352eb55b9cbc48",
-            "shasum": ""
-        },
-        "require": {
-            "bower-asset/jquery": ">=1.7"
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": [
-                "./dist/inputmask/jquery.inputmask.js",
-                "./dist/inputmask/jquery.inputmask.extensions.js",
-                "./dist/inputmask/jquery.inputmask.date.extensions.js",
-                "./dist/inputmask/jquery.inputmask.numeric.extensions.js",
-                "./dist/inputmask/jquery.inputmask.phone.extensions.js",
-                "./dist/inputmask/jquery.inputmask.regex.extensions.js"
-            ],
-            "bower-asset-ignore": [
-                "**/.*",
-                "qunit/",
-                "nuget/",
-                "tools/",
-                "js/",
-                "*.md",
-                "build.properties",
-                "build.xml",
-                "jquery.inputmask.jquery.json"
-            ]
-        },
-        "installation-source": "dist",
-        "license": [
-            "http://opensource.org/licenses/mit-license.php"
-        ],
-        "description": "jquery.inputmask is a jquery plugin which create an input mask.",
-        "keywords": [
-            "form",
-            "input",
-            "inputmask",
-            "jquery",
-            "mask",
-            "plugins"
-        ]
     },
     {
         "name": "ezyang/htmlpurifier",
@@ -331,27 +341,28 @@
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-framework.git",
-            "reference": "baed9ab2ef1ef61c5ff50ab4dd504d24796d7c2e"
+            "reference": "0941bbce25f08ee8d0fbbb4d3292996d6cfbf63b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/140505acd532961ba94c67ccde583454103a943d",
-            "reference": "baed9ab2ef1ef61c5ff50ab4dd504d24796d7c2e",
+            "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/0941bbce25f08ee8d0fbbb4d3292996d6cfbf63b",
+            "reference": "0941bbce25f08ee8d0fbbb4d3292996d6cfbf63b",
             "shasum": ""
         },
         "require": {
             "bower-asset/jquery": "2.1.*@stable | 1.11.*@stable",
-            "bower-asset/jquery.inputmask": "3.1.*",
+            "bower-asset/jquery.inputmask": "~3.2.2",
             "bower-asset/punycode": "1.3.*",
             "bower-asset/yii2-pjax": ">=2.0.1",
             "cebe/markdown": "~1.0.0 | ~1.1.0",
+            "ext-ctype": "*",
             "ext-mbstring": "*",
             "ezyang/htmlpurifier": "4.6.*",
             "lib-pcre": "*",
             "php": ">=5.4.0",
             "yiisoft/yii2-composer": "*"
         },
-        "time": "2015-08-18 08:52:48",
+        "time": "2015-10-23 14:18:59",
         "bin": [
             "yii"
         ],
@@ -431,7 +442,7 @@
         },
         "time": "2013-11-01 13:02:21",
         "type": "library",
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-0": {
                 "Diff": "lib/"
@@ -449,6 +460,60 @@
             }
         ],
         "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays)."
+    },
+    {
+        "name": "mirocow/yii2-redactor",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Mirocow/yii2-redactor.git",
+            "reference": "9ddc48668934319a2e97fcf7e1bdf19ed328fc58"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Mirocow/yii2-redactor/zipball/9ddc48668934319a2e97fcf7e1bdf19ed328fc58",
+            "reference": "9ddc48668934319a2e97fcf7e1bdf19ed328fc58",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0",
+            "yiisoft/yii2": "*"
+        },
+        "time": "2015-08-19 15:10:26",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "yii\\redactor\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Mirocow",
+                "email": "mr.mirocow@gmail.com",
+                "homepage": "http://www.mirocow.com"
+            },
+            {
+                "name": "Nghia Nguyen",
+                "email": "yiidevelop@hotmail.com",
+                "homepage": "http://www.yiidoc.com"
+            }
+        ],
+        "description": "Extension redactor for Yii2 Framework.",
+        "homepage": "http://www.yiidoc.com/",
+        "keywords": [
+            "Redactor",
+            "extension",
+            "html editor",
+            "imperavi",
+            "wysiwyg",
+            "yii2"
+        ]
     },
     {
         "name": "mihaildev/yii2-ckeditor",
@@ -476,7 +541,7 @@
                 "bower-asset-library": "vendor/bower"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "mihaildev\\ckeditor\\": ""
@@ -527,7 +592,7 @@
         "extra": {
             "bootstrap": "funson86\\blog\\Bootstrap"
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "funson86\\blog\\": ""
@@ -556,12 +621,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/swiftmailer/swiftmailer.git",
-            "reference": "caf94ee2473ba6503e411ce3bcbd33b080f1d903"
+            "reference": "6522539daf0a7bdada1cc2dccb7ec37dc0712136"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/a16e5a75aa8c3b97f224f42dbbad5b379ce14659",
-            "reference": "caf94ee2473ba6503e411ce3bcbd33b080f1d903",
+            "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/6522539daf0a7bdada1cc2dccb7ec37dc0712136",
+            "reference": "6522539daf0a7bdada1cc2dccb7ec37dc0712136",
             "shasum": ""
         },
         "require": {
@@ -570,14 +635,14 @@
         "require-dev": {
             "mockery/mockery": "~0.9.1,<0.9.4"
         },
-        "time": "2015-07-15 23:24:06",
+        "time": "2015-09-04 05:47:20",
         "type": "library",
         "extra": {
             "branch-alias": {
                 "dev-master": "5.4-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "files": [
                 "lib/swift_required.php"
@@ -611,26 +676,26 @@
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-swiftmailer.git",
-            "reference": "fffcd50b35c53888b40bb7cf9d52f25e1a4e2f43"
+            "reference": "745a045c905cc595ca5698f5cd78fd7a8944c706"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/fffcd50b35c53888b40bb7cf9d52f25e1a4e2f43",
-            "reference": "fffcd50b35c53888b40bb7cf9d52f25e1a4e2f43",
+            "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/745a045c905cc595ca5698f5cd78fd7a8944c706",
+            "reference": "745a045c905cc595ca5698f5cd78fd7a8944c706",
             "shasum": ""
         },
         "require": {
             "swiftmailer/swiftmailer": "~5.0",
             "yiisoft/yii2": ">=2.0.4"
         },
-        "time": "2015-06-18 08:31:25",
+        "time": "2015-09-29 11:01:52",
         "type": "yii2-extension",
         "extra": {
             "branch-alias": {
                 "dev-master": "2.0.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "yii\\swiftmailer\\": ""
@@ -655,6 +720,36 @@
             "swiftmailer",
             "yii2"
         ]
+    },
+    {
+        "name": "bower-asset/dropzone",
+        "version": "v4.2.0",
+        "version_normalized": "4.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/enyo/dropzone.git",
+            "reference": "e524e03c83206f652f9a452f8d1b5b25362fc14a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/enyo/dropzone/zipball/e524e03c83206f652f9a452f8d1b5b25362fc14a",
+            "reference": "e524e03c83206f652f9a452f8d1b5b25362fc14a",
+            "shasum": ""
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": [
+                "dist/min/dropzone.min.css",
+                "dist/min/dropzone.min.js"
+            ],
+            "bower-asset-ignore": [
+                "*",
+                "!dist",
+                "!dist/**/*"
+            ]
+        },
+        "installation-source": "dist",
+        "description": "Dropzone is an easy to use drag'n'drop library. It supports image previews and shows nice progress bars."
     },
     {
         "name": "bower-asset/jquery-ui",
@@ -690,19 +785,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-jui.git",
-            "reference": "7b71a0389e5aa2bfa8a3ac605705a286908b14e8"
+            "reference": "022637087b4f8b0d321e697cc0a01b09cd2d7345"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/7b71a0389e5aa2bfa8a3ac605705a286908b14e8",
-            "reference": "7b71a0389e5aa2bfa8a3ac605705a286908b14e8",
+            "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/022637087b4f8b0d321e697cc0a01b09cd2d7345",
+            "reference": "022637087b4f8b0d321e697cc0a01b09cd2d7345",
             "shasum": ""
         },
         "require": {
             "bower-asset/jquery-ui": "1.11.*@stable",
             "yiisoft/yii2": ">=2.0.4"
         },
-        "time": "2015-08-06 19:32:06",
+        "time": "2015-09-29 10:49:11",
         "type": "yii2-extension",
         "extra": {
             "branch-alias": {
@@ -713,7 +808,7 @@
                 "bower-asset-library": "vendor/bower"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "yii\\jui\\": ""
@@ -732,6 +827,62 @@
         "description": "The Jquery UI extension for the Yii framework",
         "keywords": [
             "jQuery UI",
+            "yii2"
+        ]
+    },
+    {
+        "name": "devgroup/yii2-dropzone",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/DevGroup-ru/yii2-dropzone.git",
+            "reference": "ceb6504da78c03fd21a4050dec80354715ca2d37"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/DevGroup-ru/yii2-dropzone/zipball/ceb6504da78c03fd21a4050dec80354715ca2d37",
+            "reference": "ceb6504da78c03fd21a4050dec80354715ca2d37",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/dropzone": "~4.0",
+            "yiisoft/yii2": "2.0.*",
+            "yiisoft/yii2-jui": "2.0.*"
+        },
+        "require-dev": {
+            "yiisoft/yii2-debug": "2.0.*"
+        },
+        "time": "2015-07-22 14:51:23",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "devgroup\\dropzone\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0+"
+        ],
+        "authors": [
+            {
+                "name": "Alexander Kozhevnikov",
+                "email": "b37hr3z3n@gmail.com"
+            },
+            {
+                "name": "Evgeny Dubovitsky",
+                "email": "flynn068@gmail.com"
+            },
+            {
+                "name": "Pavel Fedotov",
+                "email": "fps.06@mail.ru"
+            }
+        ],
+        "description": "Yii2 Dropzone widget",
+        "keywords": [
+            "dropzone",
+            "upload",
             "yii2"
         ]
     },
@@ -768,7 +919,7 @@
                 "dev-develop": "0.5-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-0": {
                 "Imagine": "lib/"
@@ -801,26 +952,26 @@
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-imagine.git",
-            "reference": "a5024cda253b7845520b9e62d652061f5b62456f"
+            "reference": "586c9c99cb541ec4d4d2ec2a206b08a6fd6de888"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-imagine/zipball/a5024cda253b7845520b9e62d652061f5b62456f",
-            "reference": "a5024cda253b7845520b9e62d652061f5b62456f",
+            "url": "https://api.github.com/repos/yiisoft/yii2-imagine/zipball/586c9c99cb541ec4d4d2ec2a206b08a6fd6de888",
+            "reference": "586c9c99cb541ec4d4d2ec2a206b08a6fd6de888",
             "shasum": ""
         },
         "require": {
             "imagine/imagine": "0.5.*",
             "yiisoft/yii2": "*"
         },
-        "time": "2015-05-10 18:45:22",
+        "time": "2015-09-29 10:49:20",
         "type": "yii2-extension",
         "extra": {
             "branch-alias": {
                 "dev-master": "2.0.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "yii\\imagine\\": ""
@@ -845,31 +996,92 @@
         ]
     },
     {
+        "name": "index0h/yii2-log",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/index0h/yii2-log.git",
+            "reference": "a470a913e953a190880ced04ddfa13fe2ecc4811"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/index0h/yii2-log/zipball/a470a913e953a190880ced04ddfa13fe2ecc4811",
+            "reference": "a470a913e953a190880ced04ddfa13fe2ecc4811",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0",
+            "yiisoft/yii2": "2.0.*",
+            "yiisoft/yii2-composer": "2.0.*"
+        },
+        "require-dev": {
+            "codeception/codeception": "2.0.*",
+            "yiisoft/yii2-elasticsearch": "2.0.*",
+            "yiisoft/yii2-redis": "2.0.*"
+        },
+        "time": "2015-05-24 22:32:44",
+        "type": "yii2-extension",
+        "extra": {
+            "writable": [
+                "tests/_runtime",
+                "tests/_log"
+            ]
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "index0h\\log\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Roman Levishchenko",
+                "email": "index.0h@gmail.com"
+            }
+        ],
+        "description": "Many Yii2 log targets",
+        "homepage": "https://github.com/index0h/yii2-log",
+        "keywords": [
+            "elasticsearch",
+            "log",
+            "log-target",
+            "logstash",
+            "redis",
+            "yii2",
+            "yii2-log"
+        ]
+    },
+    {
         "name": "yiisoft/yii2-codeception",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-codeception.git",
-            "reference": "4428504253562c3de6643776d1bda273088bdeb4"
+            "reference": "d2c91b5a5dbde172f9adbbde10b0a523d1bfc388"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-codeception/zipball/4428504253562c3de6643776d1bda273088bdeb4",
-            "reference": "4428504253562c3de6643776d1bda273088bdeb4",
+            "url": "https://api.github.com/repos/yiisoft/yii2-codeception/zipball/d2c91b5a5dbde172f9adbbde10b0a523d1bfc388",
+            "reference": "d2c91b5a5dbde172f9adbbde10b0a523d1bfc388",
             "shasum": ""
         },
         "require": {
             "yiisoft/yii2": ">=2.0.4"
         },
-        "time": "2015-07-28 06:25:07",
+        "time": "2015-09-29 10:36:41",
         "type": "yii2-extension",
         "extra": {
             "branch-alias": {
                 "dev-master": "2.0.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "yii\\codeception\\": ""
@@ -949,19 +1161,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-            "reference": "51ed559fe2ef9d33217e47a0ac77ffaa15f57c30"
+            "reference": "7c6b244d9cfd58a5a10cad9853edc090ffd479b1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/5ae12770c69b1b42f1be742ca16d97dc63371eb8",
-            "reference": "51ed559fe2ef9d33217e47a0ac77ffaa15f57c30",
+            "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/7c6b244d9cfd58a5a10cad9853edc090ffd479b1",
+            "reference": "7c6b244d9cfd58a5a10cad9853edc090ffd479b1",
             "shasum": ""
         },
         "require": {
             "bower-asset/bootstrap": "3.3.* | 3.2.* | 3.1.*",
             "yiisoft/yii2": ">=2.0.6"
         },
-        "time": "2015-08-13 08:37:56",
+        "time": "2015-10-15 16:22:38",
         "type": "yii2-extension",
         "extra": {
             "branch-alias": {
@@ -972,7 +1184,7 @@
                 "bower-asset-library": "vendor/bower"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "yii\\bootstrap\\": ""
@@ -1001,26 +1213,26 @@
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-debug.git",
-            "reference": "edf9a4152c795d90e8b02fc6aa88e50d53a54d02"
+            "reference": "a8eba1bb9a7163df5120fb07c0c000e298a8bcf0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/848fb19e123aaf2ea2e535282eed6c6cc781bd9a",
-            "reference": "edf9a4152c795d90e8b02fc6aa88e50d53a54d02",
+            "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/a8eba1bb9a7163df5120fb07c0c000e298a8bcf0",
+            "reference": "a8eba1bb9a7163df5120fb07c0c000e298a8bcf0",
             "shasum": ""
         },
         "require": {
             "yiisoft/yii2": ">=2.0.4",
             "yiisoft/yii2-bootstrap": "*"
         },
-        "time": "2015-08-16 11:29:25",
+        "time": "2015-09-29 10:36:38",
         "type": "yii2-extension",
         "extra": {
             "branch-alias": {
                 "dev-master": "2.0.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "yii\\debug\\": ""
@@ -1073,38 +1285,91 @@
         "installation-source": "dist"
     },
     {
+        "name": "yiisoft/yii2-gii",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yiisoft/yii2-gii.git",
+            "reference": "3946123b429ef6aa95618a4159f3c0360054ddec"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/3946123b429ef6aa95618a4159f3c0360054ddec",
+            "reference": "3946123b429ef6aa95618a4159f3c0360054ddec",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/typeahead.js": "0.10.* | ~0.11.0",
+            "phpspec/php-diff": ">=1.0.2",
+            "yiisoft/yii2": ">=2.0.4",
+            "yiisoft/yii2-bootstrap": "~2.0"
+        },
+        "time": "2015-10-07 14:54:57",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0.x-dev"
+            },
+            "asset-installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "yii\\gii\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Qiang Xue",
+                "email": "qiang.xue@gmail.com"
+            }
+        ],
+        "description": "The Gii extension for the Yii framework",
+        "keywords": [
+            "code generator",
+            "gii",
+            "yii2"
+        ]
+    },
+    {
         "name": "fzaninotto/faker",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/fzaninotto/Faker.git",
-            "reference": "5015592f93c764c48f440511f56a6c83ce744137"
+            "reference": "f6b2ebd8c462494083bfea6c087f79da36503930"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/c27c8263797619a97987bd2411f1084b9d03e90a",
-            "reference": "5015592f93c764c48f440511f56a6c83ce744137",
+            "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/f6b2ebd8c462494083bfea6c087f79da36503930",
+            "reference": "f6b2ebd8c462494083bfea6c087f79da36503930",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3"
         },
         "require-dev": {
+            "ext-intl": "*",
             "phpunit/phpunit": "~4.0",
             "squizlabs/php_codesniffer": "~1.5"
         },
-        "suggest": {
-            "ext-intl": "*"
-        },
-        "time": "2015-08-06 15:02:52",
+        "time": "2015-10-19 10:11:20",
         "type": "library",
         "extra": {
             "branch-alias": {
                 "dev-master": "1.6.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "Faker\\": "src/Faker/"
@@ -1133,26 +1398,26 @@
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-faker.git",
-            "reference": "091bc3c5db9e53031817c6e155c0bd518f3606de"
+            "reference": "6968c97fd2e951e8260d1ccc6f5e2109407290eb"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-faker/zipball/091bc3c5db9e53031817c6e155c0bd518f3606de",
-            "reference": "091bc3c5db9e53031817c6e155c0bd518f3606de",
+            "url": "https://api.github.com/repos/yiisoft/yii2-faker/zipball/6968c97fd2e951e8260d1ccc6f5e2109407290eb",
+            "reference": "6968c97fd2e951e8260d1ccc6f5e2109407290eb",
             "shasum": ""
         },
         "require": {
             "fzaninotto/faker": "~1.4",
             "yiisoft/yii2": "*"
         },
-        "time": "2015-07-28 06:25:23",
+        "time": "2015-09-29 10:49:25",
         "type": "yii2-extension",
         "extra": {
             "branch-alias": {
                 "dev-master": "2.0.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "yii\\faker\\": ""
@@ -1198,7 +1463,7 @@
         "extra": {
             "bootstrap": "funson86\\setting\\Bootstrap"
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "funson86\\setting\\": ""
@@ -1246,7 +1511,7 @@
         "extra": {
             "bootstrap": "funson86\\cms\\Bootstrap"
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "funson86\\cms\\": ""
@@ -1292,7 +1557,7 @@
         "extra": {
             "bootstrap": "funson86\\auth\\Bootstrap"
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "funson86\\auth\\": ""
@@ -1318,179 +1583,252 @@
         ]
     },
     {
-        "name": "bower-asset/dropzone",
-        "version": "v4.0.1",
-        "version_normalized": "4.0.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/enyo/dropzone.git",
-            "reference": "b82c4797c9237aa5827f4fa97cd8d785ce16acce"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/enyo/dropzone/zipball/b82c4797c9237aa5827f4fa97cd8d785ce16acce",
-            "reference": "b82c4797c9237aa5827f4fa97cd8d785ce16acce",
-            "shasum": ""
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": [
-                "dist/min/dropzone.min.css",
-                "dist/min/dropzone.min.js"
-            ],
-            "bower-asset-ignore": [
-                "*",
-                "!dist",
-                "!dist/**/*"
-            ]
-        },
-        "installation-source": "dist",
-        "description": "Dropzone is an easy to use drag'n'drop library. It supports image previews and shows nice progress bars."
-    },
-    {
-        "name": "devgroup/yii2-dropzone",
+        "name": "gkralik/php-uglifyjs",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "https://github.com/DevGroup-ru/yii2-dropzone.git",
-            "reference": "ceb6504da78c03fd21a4050dec80354715ca2d37"
+            "url": "https://github.com/gkralik/php-uglifyjs.git",
+            "reference": "c76667a3adaed9efd54ef5ba90576308ed88c291"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/DevGroup-ru/yii2-dropzone/zipball/ceb6504da78c03fd21a4050dec80354715ca2d37",
-            "reference": "ceb6504da78c03fd21a4050dec80354715ca2d37",
+            "url": "https://api.github.com/repos/gkralik/php-uglifyjs/zipball/c76667a3adaed9efd54ef5ba90576308ed88c291",
+            "reference": "c76667a3adaed9efd54ef5ba90576308ed88c291",
             "shasum": ""
         },
-        "require": {
-            "bower-asset/dropzone": "~4.0",
-            "yiisoft/yii2": "2.0.*",
-            "yiisoft/yii2-jui": "2.0.*"
-        },
-        "require-dev": {
-            "yiisoft/yii2-debug": "2.0.*"
-        },
-        "time": "2015-07-22 14:51:23",
-        "type": "yii2-extension",
+        "time": "2015-10-10 12:58:30",
+        "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "devgroup\\dropzone\\": ""
+                "GK\\": "lib/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "GPL-3.0+"
+            "LGPL 2.1"
         ],
         "authors": [
             {
-                "name": "Alexander Kozhevnikov",
-                "email": "b37hr3z3n@gmail.com"
-            },
-            {
-                "name": "Evgeny Dubovitsky",
-                "email": "flynn068@gmail.com"
-            },
-            {
-                "name": "Pavel Fedotov",
-                "email": "fps.06@mail.ru"
+                "name": "Gregor Kralik",
+                "email": "g.kralik@gmail.com"
             }
         ],
-        "description": "Yii2 Dropzone widget",
+        "description": "PHP Javascript packer"
+    },
+    {
+        "name": "mrclay/jsmin-php",
+        "version": "2.3.2",
+        "version_normalized": "2.3.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mrclay/jsmin-php.git",
+            "reference": "932c9633c35b390beb2cfdea69a41ea7dbc8d759"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mrclay/jsmin-php/zipball/932c9633c35b390beb2cfdea69a41ea7dbc8d759",
+            "reference": "932c9633c35b390beb2cfdea69a41ea7dbc8d759",
+            "shasum": ""
+        },
+        "require": {
+            "ext-pcre": "*",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.2"
+        },
+        "time": "2015-03-30 15:04:42",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "JSMin\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Stephen Clay",
+                "email": "steve@mrclay.org",
+                "role": "Developer"
+            },
+            {
+                "name": "Ryan Grove",
+                "email": "ryan@wonko.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Provides a modified port of Douglas Crockford's jsmin.c, which removes unnecessary whitespace from JavaScript files.",
+        "homepage": "https://github.com/mrclay/jsmin-php/",
         "keywords": [
-            "dropzone",
-            "upload",
-            "yii2"
+            "compress",
+            "jsmin",
+            "minify"
         ]
     },
     {
-        "name": "mirocow/yii2-redactor",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "name": "tubalmartin/cssmin",
+        "version": "v2.4.8-p4",
+        "version_normalized": "2.4.8.0-patch4",
         "source": {
             "type": "git",
-            "url": "https://github.com/Mirocow/yii2-redactor.git",
-            "reference": "9ddc48668934319a2e97fcf7e1bdf19ed328fc58"
+            "url": "https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port.git",
+            "reference": "fe84d71e8420243544c0ce3bd0f5d7c1936b0f90"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/tubalmartin/YUI-CSS-compressor-PHP-port/zipball/fe84d71e8420243544c0ce3bd0f5d7c1936b0f90",
+            "reference": "fe84d71e8420243544c0ce3bd0f5d7c1936b0f90",
+            "shasum": ""
         },
         "require": {
-            "php": ">=5.3.0",
-            "yiisoft/yii2": "*"
+            "php": ">=5.0.0"
         },
-        "time": "2015-08-19 15:10:26",
-        "type": "yii2-extension",
-        "installation-source": "source",
+        "time": "2014-09-22 08:08:50",
+        "type": "library",
+        "installation-source": "dist",
         "autoload": {
-            "psr-0": {
-                "yii\\redactor\\": ""
-            }
+            "classmap": [
+                "cssmin.php"
+            ]
         },
+        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "BSD-3-Clause"
         ],
         "authors": [
             {
-                "name": "Nghia Nguyen",
-                "email": "yiidevelop@hotmail.com",
-                "homepage": "http://www.yiidoc.com"
-            },
-            {
-                "name": "Mirocow",
-                "email": "mr.mirocow@gmail.com",
-                "homepage": "http://www.mirocow.com"
+                "name": "Túbal Martín",
+                "homepage": "http://tubalmartin.me/"
             }
         ],
-        "description": "Extension redactor for Yii2 Framework.",
-        "homepage": "http://www.yiidoc.com/",
+        "description": "A PHP port of the YUI CSS compressor",
+        "homepage": "https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port",
         "keywords": [
-            "WYSIWYG",
-            "extension",
-            "html editor",
-            "imperavi",
-            "redactor",
-            "yii2"
-        ],
-        "support": {
-            "issues": "https://github.com/Mirocow/yii2-redactor/issues?state=open",
-            "wiki": "http://www.yiidoc.com/wiki/",
-            "source": "https://github.com/Mirocow/yii2-redactor"
-        }
+            "compress",
+            "compressor",
+            "css",
+            "minify",
+            "yui"
+        ]
     },
     {
-        "name": "yiisoft/yii2-gii",
+        "name": "firephp/firephp-core",
+        "version": "v0.4.0",
+        "version_normalized": "0.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/firephp/firephp-core.git",
+            "reference": "fabad0f2503f9577fe8dd2cb1d1c7cd73ed2aacf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/firephp/firephp-core/zipball/fabad0f2503f9577fe8dd2cb1d1c7cd73ed2aacf",
+            "reference": "fabad0f2503f9577fe8dd2cb1d1c7cd73ed2aacf",
+            "shasum": ""
+        },
+        "time": "2013-04-23 15:28:20",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "lib/FirePHPCore/FirePHP.class.php",
+                "lib/FirePHPCore/fb.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Christoph Dorn",
+                "email": "christoph@christophdorn.com",
+                "homepage": "http://christophdorn.com"
+            }
+        ],
+        "description": "Traditional FirePHPCore library for sending PHP variables to the browser.",
+        "homepage": "https://github.com/firephp/firephp-core"
+    },
+    {
+        "name": "mrclay/minify",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "https://github.com/yiisoft/yii2-gii.git",
-            "reference": "071113c6a2d514dec2f5df5de066dc7cd5f966b8"
+            "url": "https://github.com/mrclay/minify.git",
+            "reference": "590cf9b57efaec6c60876754ccf2519b7462520a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/0a3940119a7552418bbd7c842de12953390e4ab2",
-            "reference": "071113c6a2d514dec2f5df5de066dc7cd5f966b8",
+            "url": "https://api.github.com/repos/mrclay/minify/zipball/590cf9b57efaec6c60876754ccf2519b7462520a",
+            "reference": "590cf9b57efaec6c60876754ccf2519b7462520a",
             "shasum": ""
         },
         "require": {
-            "bower-asset/typeahead.js": "0.10.* | ~0.11.0",
-            "phpspec/php-diff": ">=1.0.2",
-            "yiisoft/yii2": ">=2.0.4",
-            "yiisoft/yii2-bootstrap": "~2.0"
+            "ext-pcre": "*",
+            "firephp/firephp-core": "~0.4.0",
+            "mrclay/jsmin-php": "~2",
+            "php": ">=5.2.1",
+            "tubalmartin/cssmin": "~2.4.8"
         },
-        "time": "2015-08-19 15:07:28",
-        "type": "yii2-extension",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.0.x-dev"
-            },
-            "asset-installer-paths": {
-                "npm-asset-library": "vendor/npm",
-                "bower-asset-library": "vendor/bower"
+        "suggest": {
+            "leafo/lessphp": "~0.4.0",
+            "meenie/javascript-packer": "~1.1"
+        },
+        "time": "2015-10-02 17:40:12",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "lib/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Stephen Clay",
+                "email": "steve@mrclay.org",
+                "role": "Developer"
             }
+        ],
+        "description": "Minify is a PHP5 app that helps you follow several rules for client-side performance. It combines multiple CSS or Javascript files, removes unnecessary whitespace and comments, and serves them with gzip encoding and optimal client-side cache headers",
+        "homepage": "https://github.com/mrclay/minify"
+    },
+    {
+        "name": "mirocow/yii2-minify-view",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Mirocow/yii2-minify-view.git",
+            "reference": "343e51020ee821add9a84bcec816d302a657b96a"
         },
-        "installation-source": "source",
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Mirocow/yii2-minify-view/zipball/343e51020ee821add9a84bcec816d302a657b96a",
+            "reference": "343e51020ee821add9a84bcec816d302a657b96a",
+            "shasum": ""
+        },
+        "require": {
+            "gkralik/php-uglifyjs": "dev-master",
+            "mrclay/minify": "*",
+            "yiisoft/yii2": "2.0.*"
+        },
+        "time": "2015-10-15 01:53:42",
+        "type": "yii2-extension",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "yii\\gii\\": ""
+                "mirocow\\minify\\": ""
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -1499,14 +1837,18 @@
         ],
         "authors": [
             {
-                "name": "Qiang Xue",
-                "email": "qiang.xue@gmail.com"
+                "name": "Mirocow",
+                "email": "mr.mirocow@gmail.com",
+                "homepage": "http://mirocow.com/"
             }
         ],
-        "description": "The Gii extension for the Yii framework",
+        "description": "Yii2 View component with minification html & css & js",
         "keywords": [
-            "code generator",
-            "gii",
+            "JS",
+            "css",
+            "html",
+            "minify",
+            "view",
             "yii2"
         ]
     },
@@ -1516,21 +1858,34 @@
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "git@github.com:Mirocow/yii2-eav.git",
-            "reference": "620daa3292ff685ad12128cf7e606e5511551d7c"
+            "url": "https://github.com/Mirocow/yii2-eav.git",
+            "reference": "6c676a57992f2c57988357fea04fcbd8c83e303b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Mirocow/yii2-eav/zipball/6c676a57992f2c57988357fea04fcbd8c83e303b",
+            "reference": "6c676a57992f2c57988357fea04fcbd8c83e303b",
+            "shasum": ""
         },
         "require": {
             "php": ">=5.4.0",
-            "yiisoft/yii2": "*"
+            "yiisoft/yii2": ">=2.0.5"
         },
-        "time": "2015-08-21 11:25:03",
-        "type": "library",
+        "require-dev": {
+            "yiisoft/yii2-codeception": "*",
+            "yiisoft/yii2-debug": "*",
+            "yiisoft/yii2-faker": "*",
+            "yiisoft/yii2-gii": "*"
+        },
+        "time": "2015-10-23 13:41:58",
+        "type": "yii2-extension",
         "installation-source": "source",
         "autoload": {
             "psr-4": {
                 "mirocow\\eav\\": "./src"
             }
         },
+        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "MIT"
         ],
@@ -1552,67 +1907,6 @@
         "keywords": [
             "eav",
             "yii2"
-        ]
-    },
-    {
-        "name": "index0h/yii2-log",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/index0h/yii2-log.git",
-            "reference": "a470a913e953a190880ced04ddfa13fe2ecc4811"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/index0h/yii2-log/zipball/a470a913e953a190880ced04ddfa13fe2ecc4811",
-            "reference": "a470a913e953a190880ced04ddfa13fe2ecc4811",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.4.0",
-            "yiisoft/yii2": "2.0.*",
-            "yiisoft/yii2-composer": "2.0.*"
-        },
-        "require-dev": {
-            "codeception/codeception": "2.0.*",
-            "yiisoft/yii2-elasticsearch": "2.0.*",
-            "yiisoft/yii2-redis": "2.0.*"
-        },
-        "time": "2015-05-24 22:32:44",
-        "type": "yii2-extension",
-        "extra": {
-            "writable": [
-                "tests/_runtime",
-                "tests/_log"
-            ]
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "index0h\\log\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Roman Levishchenko",
-                "email": "index.0h@gmail.com"
-            }
-        ],
-        "description": "Many Yii2 log targets",
-        "homepage": "https://github.com/index0h/yii2-log",
-        "keywords": [
-            "elasticsearch",
-            "log",
-            "log-target",
-            "logstash",
-            "redis",
-            "yii2",
-            "yii2-log"
         ]
     }
 ]

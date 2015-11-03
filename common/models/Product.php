@@ -38,6 +38,8 @@ use yii\db\Expression;
  */
 class Product extends \yii\db\ActiveRecord
 {
+    use \mirocow\eav\EavTrait;
+
     public $eavWeight;
   
     /**
@@ -64,7 +66,7 @@ class Product extends \yii\db\ActiveRecord
             ]            
         ];
     }
-
+ 
     /**
      * @inheritdoc
      */
@@ -251,8 +253,11 @@ class Product extends \yii\db\ActiveRecord
     {       
         return \mirocow\eav\models\EavAttribute::find()
           ->joinWith('entity')
-          ->where(['entityModel' => $this::className()]);  
-    }    
+          ->where([
+            'categoryId' => $this->category->parent_id,
+            'entityModel' => $this::className()
+        ]);  
+    }        
 
     /**
      * Before save.

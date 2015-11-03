@@ -441,7 +441,7 @@
 }
 .tobuy-box .add_cart_li .btn, .tobuy-box .add_cart_li .graybtn {
     font-size:16px;
-    padding:10px 20px 12px
+    padding:5px 20px;
 }
 .tobuy-box .add_cart_li .graybtn {
     margin-left:12px;

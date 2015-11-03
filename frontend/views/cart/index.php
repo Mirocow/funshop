@@ -9,63 +9,77 @@ foreach($products as $product) {
 }
 ?>
 
-<div id="main">
-    <div class="top-next cle">
-        <div class="fl"> 我有账号，现在就<a href="javascript:;" id="login-link">登录</a> </div>
-        <div class="fr"> <a href="http://www.mayicun.com/item/newsearch" class="graybtn">继续购物</a> <a href="javascript:;" class="btn" id="checkout-top">&nbsp;去下单&nbsp;</a> </div>
-    </div>
-    <div class="cart-box" id="cart-box">
-        <div class="hd">
-            <span class="no1">&nbsp;</span>
-            <span class="no2" id="itemsnum-top"><?= $totalNumber ?>件商品</span>
-            <span class="no3">单价</span>
-            <span>数量</span>
-            <span>小计</span>
-        </div>
-        <div class="goods-list">
-            <ul>
-                <?php foreach ($products as $product) { ?>
-                <li class="cle hover">
-                    <div class="check">
-                        &nbsp;<!--input type="checkbox" name="goodsId" value="728286208" checked="checked" /-->
-                    </div>
-                    <div class="pic"> <a href="<?= Yii::$app->urlManager->createUrl(['product/view', 'id' => $product->product_id]) ?>" target="_blank"> <img alt="<?= $product->name ?>" src="<?= $product->thumb ?>"></a> </div>
-                    <div class="name"> <a href="<?= Yii::$app->urlManager->createUrl(['product/view', 'id' => $product->product_id]) ?>" target="_blank"> <?= $product->name ?> </a>
-                        <p> </p>
-                    </div>
-                    <div class="price-one">
-                        <p>￥<em><?= $product->price ?></em></p>
-                    </div>
-                    <div class="nums">
-                        <span class="minus" title="减少1个数量" data-link="<?= Yii::$app->urlManager->createUrl(['cart/index', 'type' => 'minus', 'product_id' => $product->product_id]) ?>">-</span>
-                        <input type="text" data-limit="99"  data-link="<?= Yii::$app->urlManager->createUrl(['cart/index', 'type' => 'change', 'product_id' => $product->product_id]) ?>" value="<?= $product->number ?>">
-                        <span class="add" title="增加1个数量" data-link="<?= Yii::$app->urlManager->createUrl(['cart/index', 'type' => 'add', 'product_id' => $product->product_id]) ?>">+</span>
-                    </div>
-                    <div class="price-xj"><span>￥</span> <em><?= $product->number * $product->price ?></em> </div>
-                    <div class="del"> <a class="btn-del" href="<?= Yii::$app->urlManager->createUrl(['cart/delete', 'id' => $product->product_id]) ?>">删除</a></div>
-                </li>
-                <?php } ?>
-            </ul>
-        </div>
-        <!-- 积分换购商品 -->
-        <div class="fd cle">
-            <div class="fl">
-                <p class="no1">
-                    <a id="del-all" href="<?= Yii::$app->urlManager->createUrl(['cart/destroy']) ?>">清空购物车</a>
-                </p>
-                <p><a class="graybtn" href="<?= Yii::$app->urlManager->createUrl(['product/search']) ?>">继续购物</a></p>
+    <section id="cart_items">
+        <div class="container">
+
+            <div class="table-responsive cart_info">
+                <table class="table table-condensed">
+                    <thead>
+                    <tr class="cart_menu">
+                        <td class="image">Товар</td>
+                        <td class="description"> </td>
+                        <td class="price">Цена</td>
+                        <td class="quantity">Количество</td>
+                        <td class="total">Итого</td>
+                        <td></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <?php foreach ($products as $product) : ?>
+
+                    <tr>
+                        <td class="cart_product">
+                            <a href="<?= Yii::$app->urlManager->createUrl(['product/view', 'id' => $product->product_id]) ?>" target="_blank" >
+                                <img src="<?= $product->thumb ?>" alt="<?= $product->name ?>" >
+                            </a>
+                        </td>
+                        <td class="cart_description">
+                            <h4><a href="<?= Yii::$app->urlManager->createUrl(['product/view', 'id' => $product->product_id]) ?>" target="_blank">
+                                    <?= $product->name ?>
+                                </a></h4>
+                            <p>ID: 1089772</p>
+                        </td>
+                        <td class="cart_price">
+                            <p><?= $product->price ?> <i class="fa fa-rouble"></i></p>
+                        </td>
+                        <td class="cart_quantity">
+                            <div class="cart_quantity_button nums">
+                                <a class="cart_quantity_down minus" href="#" data-link="<?= Yii::$app->urlManager->createUrl(['cart/index', 'type' => 'minus', 'product_id' => $product->product_id]) ?>"> - </a>
+                                <input class="cart_quantity_input" type="text" name="quantity" value="<?= $product->number ?>" autocomplete="off" size="2">
+                                <a class="cart_quantity_up add" href="#" data-link="<?= Yii::$app->urlManager->createUrl(['cart/index', 'type' => 'add', 'product_id' => $product->product_id]) ?>"> + </a>
+                            </div>
+
+                        </td>
+                        <td class="cart_total">
+                            <p class="cart_total_price"><?=$totalPrice?><i class="fa fa-rouble"></i></p>
+                        </td>
+                        <td class="cart_delete">
+                            <a class="cart_quantity_delete" href="<?= Yii::$app->urlManager->createUrl(['cart/delete', 'id' => $product->product_id]) ?>"><i class="fa fa-times"></i></a>
+                        </td>
+                    </tr>
+                    <?php endforeach ?>
+                    <tr class="cart_menu_footer">
+                        <td class="text-right" colspan="6">
+                            Итого: <?= $totalNumber ?> товара, на сумму <strong><?=$totalPrice?></strong> рублей
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
             </div>
-            <div id="price-total" class="fr">
-                <p><?= $totalNumber ?>件商品，总价：<span class="red">¥<strong><?= $totalPrice ?></strong></span></p>
-                <p><span class="green">恭喜您，已免邮！</span><a class="btn" href="javascript:;">去下单</a></p>
+            <div class="row">
+                <a class="btn btn-default btn-success check_out" href="<?=Yii::$app->urlManager->createUrl(['cart/checkout'])?>"><i class="fa fa-check"></i> Оформить</a>
+                <a class="btn btn-default check_out" href="<?= Yii::$app->urlManager->createUrl(['cart/destroy']) ?>"><i class="fa fa-times"></i> Очистить</a>
             </div>
         </div>
-    </div>
-</div>
+    </section> <!--/#cart_items-->
+
+
 
 <?php
 $urlCurrent = Yii::$app->urlManager->baseUrl;
-$urlCheckout = Yii::$app->urlManager->createUrl(['cart/checkout']);
 $js = <<<JS
 jQuery(".minus").click(function(){
     var link = $(this).data('link');
@@ -90,9 +104,6 @@ jQuery(".nums input").change(function(){
             location.reload();
         }
     });
-});//end click
-jQuery(".btn").click(function(){
-    location.href = '{$urlCheckout}';
 });//end click
 JS;
 

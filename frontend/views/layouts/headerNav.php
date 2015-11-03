@@ -6,53 +6,52 @@ $result = $query->select('sum(number) as number')->from('cart')->where(['or', 's
 $totalNumber = $result['number'];
 
 ?>
-<div class="hd_nav">
-    <div class="hd_nav_bd cle">
-        <div class="main_nav" id="main_nav">
-            <div class="main_nav_link">
-                <a href="javascript:;">全部商品分类</a>
-            </div>
-            <div class="main_cata" id="J_mainCata">
-                <?php
-                $allCategory = \common\models\Category::get(0, \common\models\Category::find()->asArray()->all());
-                foreach ($allCategory as $category) {
+    <div class="header-bottom"><!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="/" class="active">Home</a></li>
+                            <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="shop.html">Products</a></li>
+                                    <li><a href="product-details.html">Product Details</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li>
+                                        <a class="tit" href="<?= Yii::$app->urlManager->createUrl(['/cart']) ?>">
+                                            <b class="glyphicon glyphicon-shopping-cart"></b>
+                                            Ваша корзина<span><i class="glyphicon glyphicon-play"></i></span>
+                                            <em class="num" id="hd_cartnum" <?php if ($totalNumber > 0) { ?>style="visibility: visible"<?php } ?>><?= $totalNumber ?></em>
+                                        </a>
 
-                    if ($category["parent_id"] == 0) {
-                        $menuItems[$category['id']] = [
-                            'label' => $category['name'],
-                            'url' => ['/category/view', 'id' => $category['id']],
-                        ];
-                    } else {
-                        $menuItems[$category['parent_id']]['items'][$category['id']] = [
-                            'label' => $category['name'],
-                            'url' => ['/category/view', 'id' => $category['id']],
-                        ];
-                    }
-                }
+                                    </li>
+                                    <li><a href="login.html">Login</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="blog.html">Blog List</a></li>
+                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-                echo Nav::widget([
-                    'options' => ['class' => ''],
-                    'items' => $menuItems,
-                ]);
-                ?>
-
-            </div>
-            <div class="J_subCata" id="J_subCata">
             </div>
         </div>
-        <ul class="sub_nav cle" id="sub_nav">
-            <li><a href="<?= Yii::$app->homeUrl ?>" rel="nofollow">首页</a></li>
-
-            <li><a target="_blank" href="<?= Yii::$app->homeUrl ?>">折扣信息</a></li>
-            <li><a target="_blank" href="<?= Yii::$app->homeUrl ?>" rel="nofollow">100%正品</a></li>
-            <li><a target="_blank" href="<?= Yii::$app->homeUrl ?>">手机商城</a></li>
-        </ul>
-        <div class="hd_cart" id="head_cart">
-            <a class="tit" href="<?= Yii::$app->urlManager->createUrl(['/cart']) ?>"><b class="glyphicon glyphicon-shopping-cart"></b>去购物车结算<span><i class="glyphicon glyphicon-play"></i></span><em class="num" id="hd_cartnum" <?php if ($totalNumber > 0) { ?>style="visibility: visible"<?php } ?>><?= $totalNumber ?></em></a>
-            <div class="list"><p class="load"></p></div>
-        </div>
-    </div>
-</div>
+    </div><!--/header-bottom-->
 
 <?php
 $js = <<<JS
@@ -73,7 +72,11 @@ jQuery("#head_cart").mouseenter(function(){
                     data_class = " data_over";
                 }
             });
-            str += '<div class="data">' + data_class + '</div><div class="count">共<span class="red" id="hd_cart_count">' + data.totalNumber + '</span>件商品，满99元就包邮哦~<p>总价:<span class="red">￥<em id="hd_cart_total">' + data.totalPrice + '</em></span><a href="/cart" class="btn">去结算</a></p></div>';
+            str += '<div class="data">' + data_class + '</div>' +
+                '<div class="count">共<span class="red" id="hd_cart_count">' + data.totalNumber + '</span>' +
+                '件商品，满99元就包邮哦~<p>总价:<span class="red">￥<em id="hd_cart_total">' + data.totalPrice + '</em></span>' +
+                '<a href="/cart" class="btn">去结算</a></p>' +
+                '</div>';
             jQuery("#head_cart").find('.list').html(str);
         }
     }).error(function(){

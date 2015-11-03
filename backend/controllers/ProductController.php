@@ -143,7 +143,7 @@ class ProductController extends Controller
                     $model->save();
                 }
 
-                return $this->redirect(['view', 'id' => $model->id]);
+                return $this->redirect(['update', 'id' => $model->id]);
             }
         }
 

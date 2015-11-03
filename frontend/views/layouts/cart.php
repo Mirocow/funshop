@@ -28,7 +28,8 @@ $totalNumber = $result['number'];
 <?php $this->beginBody() ?>
 <div id="header" class="new_header">
     <?= $this->render('headerBar') ?>
-    <?= $this->render('headerCart') ?>
+    <?= $this->render('headerSearch') ?>
+    <?= $this->render('headerNav') ?>
 </div>
 
 <?= $content ?>

@@ -1,4 +1,5 @@
 <?php
+
 /* @var $this yii\web\View */
 $this->title = 'Funshop';
 $this->registerCssFile('@web/css/index.css', ['depends' => \frontend\assets\AppAsset::className()]);
@@ -6,74 +7,110 @@ $this->registerJsFile('@web/js/switchable.js', ['depends' => \frontend\assets\Ap
 ?>
 
 
-<div class="index-banner">
-    <div class="index-slide" id="index-slide">
-        <ul>
-            <li data-img="/images/banner1.jpg">
-                <a href="#" title=""></a>
-            </li>
-            <li data-img="/images/banner2.jpg">
-                <a href="#" title=""></a>
-            </li>
-            <li data-img="/images/banner3.jpg">
-                <a href="#" title=""></a>
-            </li>
-            <li data-img="/images/banner4.jpg">
-                <a href="#" title=""></a>
-            </li>
-            <li data-img="/images/banner1.jpg">
-                <a href="#" title=""></a>
-            </li>
-            <li data-img="/images/banner2.jpg">
-                <a href="#" title=""></a>
-            </li>
-            <li data-img="/images/banner3.jpg">
-                <a href="#" title=""></a>
-            </li>
-            <li data-img="/images/banner4.jpg">
-                <a href="#" title=""></a>
-            </li>
-        </ul>
+    <section id="slider"><!--slider-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#slider-carousel" data-slide-to="1"></li>
+                            <li data-target="#slider-carousel" data-slide-to="2"></li>
+                        </ol>
 
-        <div class="trigger-box">&nbsp;</div>
-    </div>
-</div>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-sm-6">
+                                    <h1><span>E</span>-SHOPPER</h1>
+                                    <h2>Free E-Commerce Template</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    <button type="button" class="btn btn-default get">Get it now</button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
+                                    <img src="images/home/pricing.png"  class="pricing" alt="" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-6">
+                                    <h1><span>E</span>-SHOPPER</h1>
+                                    <h2>100% Responsive Design</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    <button type="button" class="btn btn-default get">Get it now</button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
+                                    <img src="images/home/pricing.png"  class="pricing" alt="" />
+                                </div>
+                            </div>
 
-<!-- 类目推荐 -->
-<div class="series_list">
-<div class="series_box cle">
-    <div class="series_info">
-        <div class="series_name name_product">
-            <h2>手机</h2>
+                            <div class="item">
+                                <div class="col-sm-6">
+                                    <h1><span>E</span>-SHOPPER</h1>
+                                    <h2>Free Ecommerce Template</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    <button type="button" class="btn btn-default get">Get it now</button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
+                                    <img src="images/home/pricing.png" class="pricing" alt="" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+
+
+                    <div class="recommended_items"><!--recommended_items-->
+                        <h2 class="title text-center">Популярные товары</h2>
+
+                        <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <?php foreach ($products as $k => $item) : ?>
+                                    <div class="col-sm-4 <?=$k+1?>">
+                                        <div class="product-image-wrapper">
+                                            <div class="single-products">
+                                                <div class="productinfo text-center">
+                                                    <img src="<?= $item->thumb ?>" alt="">
+                                                    <h2><?= $item->price ?> <i class="fa fa-ruble"></i></h2>
+                                                    <p><?= $item->name ?></p>
+                                                    <a href="<?= Yii::$app->urlManager->createUrl(['product/view', 'id' => $item->id]) ?>" class="btn btn-default add-to-cart">
+                                                        <i class="fa fa-shopping-cart"></i>Подробнее</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php if( (($k+1) % 3) == 0): ?>
+                                    </div>
+                                    <div class="item">
+                                <?php endif;?>
+                                <?php endforeach; ?>
+                                    </div>
+                            </div>
+                            <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div><!--/recommended_items-->
+
+                </div>
+            </div>
         </div>
-        <ul class="brand">
-            <li> <a href="#" target="_blank"> <img src="/upload/201502/small-iphone61.jpg"></a> </li>
-            <li> <a href="#" target="_blank"> <img src="/upload/201502/small-macbook.jpg"></a> </li>
-            <li> <a href="#" target="_blank"> <img src="/upload/201502/small-sumsung.jpg"></a> </li>
-        </ul>
-        <div class="brand_cata">
-            <a target="_blank" href="http://www.mayicun.com/item/0103/">苹果</a>
-            <a target="_blank" href="http://www.mayicun.com/item/0107/">三星</a>
-            <a target="_blank" href="http://www.mayicun.com/item/0116/">华为</a>
-        </div>
-    </div>
-    <div class="series_pic"> <a href="#" target="_blank"> <img src="/upload/201502/small-iphone6.jpg"></a> </div>
-    <div class="pro_list">
-        <ul class="cle">
-            <?php foreach ($products as $item) { ?>
-            <li>
-                <a href="<?= Yii::$app->urlManager->createUrl(['product/view', 'id' => $item->id]) ?>" target="_blank">
-                    <p class="pic"> <img src="<?= $item->thumb ?>"></p>
-                    <h3><?= $item->name ?></h3>
-                    <p class="price">￥<?= $item->price ?></p>
-                </a>
-            </li>
-            <?php } ?>
-        </ul>
-    </div>
-</div>
+    </section><!--/slider-->
 
-</div>
+
 
 <?php
 $js = <<<JS

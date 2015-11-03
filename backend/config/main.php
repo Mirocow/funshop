@@ -8,7 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-backend',
-    'basePath' => dirname(__DIR__),
+    'basePath' => dirname(__DIR__),    
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
@@ -51,7 +51,17 @@ return [
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
-        ],
+        ],        
+        'view' => [
+            'theme' => [
+                'basePath' => '@app/themes/coloradmin',
+                'baseUrl' => '@web/themes/coloradmin',
+                'pathMap' => [
+                  '@app/views' => '@app/themes/coloradmin'
+                ],
+                
+            ],
+        ],         
     ],
     'params' => $params,
 ];

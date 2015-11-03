@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use common\models\Category;
 use mihaildev\ckeditor\CKEditor;
+use yii\redactor\widgets\Redactor;
 
 $i = 1;
 
@@ -40,12 +41,33 @@ $i = 1;
 
     <?= $form->field($model, 'brief')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'content')->widget(CKEditor::className(),[
+    <?/*= $form->field($model, 'content')->widget(CKEditor::className(),[
         'editorOptions' => [
             'preset' => 'full',
             'inline' => false,
         ],
-    ]); ?>
+    ]);*/ ?>
+    
+    <div>
+        <?= Redactor::widget(
+          [
+            'model' => $model,
+            'attribute' => 'content',
+            'options' => [
+              'style' => 'width: 300px; height: 340px;',
+            ],
+            'clientOptions' => [
+              'imageManagerJson' => \yii\helpers\Url::to('/redactor/upload/imagejson'),
+              'imageUpload' => \yii\helpers\Url::to('/redactor/upload/image'),
+              'fileUpload' => \yii\helpers\Url::to('/redactor/upload/file'),
+              'lang' => 'ru',
+              'plugins' => ['fontcolor', 'filemanager', 'imagemanager', 'table', 'undoredo'],
+              'placeholder' => 'Заполните пожайлуста анонс',
+            ],
+          ]
+        );
+        ?>
+    </div>    
 
     <?= $form->field($model, 'keywords')->textInput(['maxlength' => 255]) ?>
 
@@ -58,6 +80,7 @@ $i = 1;
     <?= $form->field($model, 'status')->dropDownList(\common\models\Status::labels()) ?>
 
     <?php if (!$model->isNewRecord) { ?>
+    
         <div class="form-group">
             <?php
             foreach ($model->productImages as $image) {
@@ -79,8 +102,6 @@ $i = 1;
         
         <?//=$form->field($model,'test'); ?>
         
-        <?=$form->field($model,'test')->dropDownList(['1' => 'Опция 1', '2' => 'Опция 2'], ['label' => 'XXX']); ?>
-
         <div class="form-group">
             <?= \backend\widgets\image\ImageDropzone::widget([
                 'name' => 'file',
@@ -104,6 +125,8 @@ $i = 1;
 
     <?php } ?>
 
+    <?= $this->render('/product/partials/fields', ['form' => $form, 'model' => $model])?>    
+    
     <div class="form-group">
         <label class="col-lg-2 control-label" for="">&nbsp;</label>
         <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

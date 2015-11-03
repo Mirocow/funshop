@@ -1,7 +1,7 @@
 <?php
 return [
     'name' => 'Advanced-funson86',
-    'language' => 'en_EN',
+    'language' => 'ru_RU',
     'timeZone' => 'Asia/Shanghai',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
@@ -43,6 +43,6 @@ return [
         ],
         'setting' => [
             'class' => 'funson86\setting\Setting',
-        ],
+        ],       
     ],
 ];

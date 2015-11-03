@@ -1,35 +1,41 @@
-<div class="hd_bar">
-    <div class="bd_bar_bd cle">
-        <ul class="welcome">
-            <li><a id="favorite_wb" href="javascript:;" rel="nofollow">收藏商城</a></li>
-            <li id="header_user">
-                <?php if (Yii::$app->user->isGuest) { ?>
-                    <a href="<?= Yii::$app->urlManager->createUrl(['site/login']) ?>" rel="nofollow">请登录</a><s>|</s><a href="<?= Yii::$app->urlManager->createUrl(['site/signup']) ?>" rel="nofollow">免费注册</a>
-                <?php } else { ?>
-                    <a class="" href="<?= Yii::$app->urlManager->createUrl(['/user']) ?>"><?= Yii::$app->user->identity->username ?></a>&nbsp;[<a href="<?= Yii::$app->urlManager->createUrl(['site/logout']) ?>">退出</a>]
-                <?php } ?>
-            </li>
-        </ul>
-        <ul id="userinfo-bar">
-            <li><a href="<?= Yii::$app->urlManager->createUrl(['/order']) ?>">我的订单</a></li>
-            <li><a href="<?= Yii::$app->urlManager->createUrl(['user/favorite']) ?>">我的收藏</a></li>
-            <li><a class="menu-link" href="<?= Yii::$app->urlManager->createUrl(['/cms/default/page', 'id' => 11, 'surname' => 'register']) ?>">帮助中心</a></li>
-        </ul>
-    </div>
-</div>
+    <div class="header_top"><!--header_top-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="social-icons pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header_top-->
 
 <?php
 $js = <<<JS
 jQuery("#favorite_wb").click(function(){
-    var h = "http://www.yii2shop.com/",
-    j = "我的商城 - 专注";
+    var h = location.href;
+    j = "Магазин Yii2"
     try {
         window.external.addFavorite(h, j);
     } catch(i) {
         try {
             window.sidebar.addPanel(j, h, "");
         } catch(i) {
-            alert("对不起，您的浏览器不支持此操作！请您使用菜单栏或Ctrl+D收藏丽子。");
+            alert("");
         }
     }
 });

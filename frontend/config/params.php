@@ -1,8 +1,8 @@
 <?php
 return [
     'adminEmail' => 'admin@example.com',
-    'defaultPageSizeProduct' => 2,
-    'defaultPageSizeOrder' => 2,
+    'defaultPageSizeProduct' => 12,
+    'defaultPageSizeOrder' => 12,
 
     'productHotCount' => 5,
     'productHistoryCount' => 5,

@@ -23,25 +23,85 @@ unset($parentCategory[$model->id]);
         ],
     ]); ?>
 
-    <?= $form->field($model, 'parent_id')->dropDownList($parentCategory) ?>
+    <fieldset class="scheduler-border">
+      <legend class="scheduler-border">Category</legend>
+      <?= $form->field($model, 'parent_id')->dropDownList($parentCategory) ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
+      <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
 
-    <?= $form->field($model, 'brief')->textInput(['maxlength' => 255]) ?>
+      <?= $form->field($model, 'brief')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'is_nav')->dropDownList(\funson86\cms\models\YesNo::labels()) ?>
+      <?= $form->field($model, 'is_nav')->dropDownList(\funson86\cms\models\YesNo::labels()) ?>
 
-    <?= $form->field($model, 'banner')->textInput(['maxlength' => 255]) ?>
+      <?= $form->field($model, 'banner')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'keywords')->textInput(['maxlength' => 255]) ?>
+      <?= $form->field($model, 'keywords')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
+      <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'redirect_url')->textInput(['maxlength' => 255]) ?>
+      <?= $form->field($model, 'redirect_url')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'sort_order')->textInput() ?>
+      <?= $form->field($model, 'sort_order')->textInput() ?>
 
-    <?= $form->field($model, 'status')->dropDownList(\common\models\Status::labels()) ?>
+      <?= $form->field($model, 'status')->dropDownList(\common\models\Status::labels()) ?>      
+    </fieldset>
+    
+    <fieldset class="scheduler-border">
+      <legend class="scheduler-border">Атрибуты</legend>
+      
+      <?= \yii\bootstrap\Tabs::widget([
+          'items' => [
+              [
+                  'label' => 'Заполнение полей товаров в категории "' . $model->name . '"',
+                  'content' => $this->render('/product/partials/fields', ['form' => $form, 'model' => $model]),
+                  'active' => true
+              ],
+              [
+                  'label' => 'Конструирование',
+                  'content' => mirocow\eav\admin\widgets\Fields::widget([
+                      'model' => $model,
+                      'entityModel' => 'common\models\Product',
+                  ]),
+                  'active' => false
+              ],              
+              
+              /*[
+                  'label' => 'Конструирование',
+                  'content' => $this->render('@mirocow/eav/admin/widgets/views/fields', [
+                            'uri' => \yii\helpers\Url::to(['eav/admin/ajax/index']),
+                           ]),
+                  'active' => false
+              ],*/              
+              
+              /*[
+                  'label' => 'Конструирование',
+                  'content' => $this->render('@mirocow/eav/admin/views/modal/index'),
+                  //'headerOptions' => [],
+                  //'options' => ['id' => 'myveryownID'],
+              ],*/
+              /*[
+                  'label' => 'Example',
+                  'url' => 'http://www.example.com',
+              ],*/
+              /*[
+                  'label' => 'Настройки',
+                  'items' => [
+                       [
+                           'label' => 'Конструирование',
+                           'content' => $this->render('@mirocow/eav/admin/widgets/views/fields', [
+                            'uri' => \yii\helpers\Url::to(['eav/admin/ajax/index']),
+                           ]),
+                       ],
+                       /*[
+                           'label' => 'DropdownB',
+                           'content' => 'DropdownB, Anim pariatur cliche...',
+                       ],*
+                  ],
+              ],*/
+          ],
+      ]);?>      
+      
+    </fieldset>
 
     <div class="form-group">
         <label class="col-lg-2 control-label" for="">&nbsp;</label>
@@ -51,3 +111,10 @@ unset($parentCategory[$model->id]);
     <?php ActiveForm::end(); ?>
 
 </div>
+<?php
+/*$js_form_builder =<<<JS
+
+JS;
+
+$this->registerJs($js_form_builder, yii\web\View::POS_READY, 'js_tab');*/
+?>

@@ -88,6 +88,26 @@ td img{width:100px;}
 
 </div>
 
+<p>
+Encode
+
+<?php
+  foreach($model->getEavAttributes()->all() as $attr){
+    print_r($model[$attr->name]['value']);
+  }
+?>
+</p> 
+
+<p>
+String
+
+<?php
+  foreach($model->getEavAttributes()->all() as $attr){
+    echo $model[$attr->name];
+  }
+?> 
+</p>
+
 <?php
 foreach ($model->productImagesSort as $item) {
     if (strpos($model->thumb, 'http://') === null) {

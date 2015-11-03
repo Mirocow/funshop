@@ -412,6 +412,23 @@ canvas {
     transition:all .3s;
     -webkit-backface-visibility:hidden
 }
+.hd_cart2 .tit span.with-ammount{padding-left: 10px;}
+.hd_cart2 .tit em{
+    position:absolute;
+    left:8px;
+    top:-13px;
+    text-align:center;
+    font-size:12px;
+    color:#fff;
+    border:2px solid #fff;
+    box-shadow:1px 1px 1px rgba(0, 0, 0, 0.3);
+    background-color:#FE980F;
+    border-radius:10px;
+    padding:0 5px;
+    line-height:16px;
+    visibility:hidden
+}
+
 .hd_cart .tit em {
     position:absolute;
     left:17px;
@@ -421,7 +438,7 @@ canvas {
     color:#fff;
     border:2px solid #fff;
     box-shadow:1px 1px 1px rgba(0, 0, 0, 0.3);
-    background-color:#e4393c;
+    background-color:#FE980F;
     border-radius:10px;
     padding:0 5px;
     line-height:16px;
@@ -632,13 +649,7 @@ canvas {
     position:absolute;
     right:0;
     top:0;
-    width:300px;
-    height:29px;
-    border:3px solid #a40000;
-    border-right:none;
-    background-color:#fff;
     overflow:hidden;
-    box-shadow:2px 1px 1px rgba(200, 200, 200, 0.5) inset
 }
 #header .search_box .sea_input {
     float:left;
@@ -1267,32 +1278,9 @@ a.nextpage:hover i {
     top:242px;
     right:13px
 }
-.btn, .btn-css3 {
-    display:inline-block;
-    padding:5px 12px;
-    height:16px;
-    line-height:16px;
-    _line-height:18px;
-    border:1px solid #a40000;
-    border-radius:3px;
-    font-size:100%;
-    color:#fff;
-    background-color:#e4393c;
-    overflow:hidden;
-    vertical-align:middle
-}
-.btn:hover, .btn-css3:hover {
-    text-decoration:none;
-    color:#fff;
-    background:#a40000
-}
-.btn img, .btn-css3 img {
-    vertical-align:middle
-}
 .graybtn {
     display:inline-block;
     padding:5px 12px;
-    height:16px;
     line-height:16px;
     border:1px solid #c4c4c4;
     border-radius:2px;
@@ -1305,7 +1293,7 @@ a.nextpage:hover i {
     background-repeat:repeat-x;
     vertical-align:middle
 }
-.graybtn:hover {
+.graybtn:hover, .graybtn:focus, .graybtn:active  {
     text-decoration:none;
     color:#666;
     background:#e5e5e5
@@ -1520,16 +1508,7 @@ a.nextpage:hover i {
 #login-nala-form li.last p {
     margin-bottom:10px
 }
-#login-nala-form li.last .btn {
-    height:50px;
-    width:100%;
-    text-align:center;
-    color:#fff;
-    letter-spacing:5px;
-    cursor:pointer;
-    font-size:18px;
-    border:none
-}
+
 #login-nala-form li.last .disabled {
     background:#eee url(../images/loading.gif) 110px 18px no-repeat;
     cursor:default;

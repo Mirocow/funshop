@@ -7,26 +7,47 @@ use yii\bootstrap\ActiveForm;
 /* @var $model \common\models\LoginForm */
 
 $this->title = Yii::t('app', 'Login');
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p><?= Yii::t('app', 'Please fill out the following fields to login:') ?></p>
 
     <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
-                <?= $form->field($model, 'username') ?>
-                <?= $form->field($model, 'password')->passwordInput() ?>
+        <div class="col-sm-5">
+            <div class="login-form">
+                <h2>Вход</h2>
+                <?php $form = ActiveForm::begin(['id' => 'login-form', 'layout'=>'horizontal']); ?>
+                <?= $form->field($model, 'username' ) ?>
+                <?= $form->field($model, 'password' )->passwordInput() ?>
                 <?= $form->field($model, 'rememberMe')->checkbox() ?>
                 <div style="color:#999;margin:1em 0">
-                    <?= Yii::t('app', 'If you forgot your password you can ') ?><?= Html::a(Yii::t('app', 'reset it'), ['site/request-password-reset']) ?>.
+                    <?= Html::a('Восстановления пароля', ['site/request-password-reset']) ?>
+                    .
                 </div>
                 <div class="form-group">
-                    <?= Html::submitButton( Yii::t('app', 'Login'), ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                    <?= Html::submitButton(Yii::t('app', 'Вход'), ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
                 </div>
-            <?php ActiveForm::end(); ?>
+                <?php ActiveForm::end(); ?>
+            </div>
+        </div>
+
+            <!--/login form-->
+
+        <div class="col-sm-2 ">
+            <h2 class="or">или</h2>
+        </div>
+        <div class="col-sm-5 ">
+            <div class="signup-form"><!--sign up form-->
+                <h2>Регистация</h2>
+
+                <form action="#">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email Address">
+                    <input type="password" placeholder="Password">
+                    <button type="submit" class="btn btn-default">Регистрация</button>
+                </form>
+            </div>
+            <!--/sign up form-->
         </div>
     </div>
+</div>
+
 </div>

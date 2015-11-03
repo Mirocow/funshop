@@ -32,11 +32,11 @@ class ProductController extends \frontend\components\Controller
         $rootCategoryId = Category::getRootCatalogId($model->category_id, $allCategory);
         $arraySameRootCategory = Category::getArraySubCatalogId($rootCategoryId, $allCategory);
 
-        // 同类商品  和 同大类商品
+
         $sameCategoryProducts = Product::find()->where(['category_id' => $model->category_id])->orderBy(['sales' => SORT_DESC])->limit(3)->all();
         $sameRootCategoryProducts = Product::find()->where(['category_id' => $arraySameRootCategory])->orderBy(['sales' => SORT_DESC])->limit(Yii::$app->params['productHotCount'])->all();
 
-        // 记录浏览日志
+
         $historyProducts = [];
         $cookies = Yii::$app->request->cookies;
         if ($cookies->has('productHistory')) {

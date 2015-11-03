@@ -11,67 +11,71 @@ NavBar::begin([
 ]);
 $menuItemsMain = [
     [
-        'label' => Yii::t('app', 'Order'),
+        'label' => '<i class="fa fa-cart"></i> Заказы',
         'url' => ['#'],
-        'active' => false,
+        'active' => true,
         'items' => [
             [
-                'label' => Yii::t('app', 'Order'),
+                'label' => 'Список',
                 'url' => ['/order'],
             ],
             [
-                'label' => Yii::t('app', 'Order Log'),
+                'label' => 'История(??) заказов',
                 'url' => ['/order-log'],
             ],
             [
-                'label' => Yii::t('app', 'Cart'),
+                'label' => 'Корзины',
                 'url' => ['/cart'],
             ],
         ],
         //'visible' => Yii::$app->user->can('readPost'),
     ],
     [
-        'label' => Yii::t('app', 'Product'),
+        'label' => '<i class="fa fa-cart"></i> Продукты',
         'url' => ['#'],
         'active' => false,
         'items' => [
             [
-                'label' => Yii::t('app', 'Category'),
+                'label' => 'Список категории',
                 'url' => ['/category'],
             ],
             [
-                'label' => Yii::t('app', 'Product'),
+                'label' => 'Список товаров',
                 'url' => ['/product'],
             ],
             [
-                'label' => Yii::t('app', 'Comment'),
+            'label' => 'Конструктор атрибутов',
+                'url' => ['/eav'],
+            ],            
+            [
+                'label' => 'Коментарии',
                 'url' => ['/comment'],
             ],
             [
-                'label' => Yii::t('app', 'Consultation'),
+                'label' => 'Вопрос - ответ',
                 'url' => ['/consultation'],
             ],
             [
-                'label' => Yii::t('app', 'Brand'),
+                'label' => 'Бренды',
                 'url' => ['/brand'],
             ],
             [
-                'label' => Yii::t('app', 'Search Log'),
+                'label' => 'История поиска',
                 'url' => ['/search-log'],
             ],
             [
-                'label' => Yii::t('app', 'Import'),
+                'label' => 'Импорт',
                 'url' => ['/product/import'],
             ],
             [
-                'label' => Yii::t('app', 'Export'),
+                'label' => 'Экспорт',
                 'url' => ['/product/export'],
             ],
         ],
         //'visible' => Yii::$app->user->can('readPost'),
     ],
     [
-        'label' => '<i class="fa fa-cog"></i> ' . Yii::t('app', 'User'),
+        'label' => '<i class="fa fa-user"></i> Пользователи',
         'url' => ['#'],
         'active' => false,
         //'visible' => Yii::$app->user->can('haha'),
